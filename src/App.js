@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import Square from "./Square";
 
-const clearSquares = ["", "", "", "", "", "", "", "", "", ""];
 
 function App() {
     const [gameState, setGameState] = useState(clearSquares)
     const [isXChance, setIsXChance] = useState(false)
+
+    const clearSquares = ["", "", "", "", "", "", "", "", "", ""];
 
     const squareClickHandler = (index) => {
         let strings = Array.from(gameState);
@@ -29,7 +30,7 @@ function App() {
         }
     }, [gameState])
 
-    const checkWinner = () => {
+    let checkWinner = () => {
         const lines = [
             [0, 1, 2],
             [3, 4, 5],
