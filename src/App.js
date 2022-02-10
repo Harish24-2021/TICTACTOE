@@ -51,8 +51,8 @@ function App() {
     }
 
     return (
-        <div className="app-header">
-            <p className="heading-text">Tic Tac Toe </p>
+        <div className="header">
+            <p className="heading-text">Tic-Tac-Toe </p>
             <div className="row jc-center">
                 <Square className="b-bottom-right b-top b-left" onClick={() => squareClickHandler(0)} state={gameState[0]}/>
                 <Square className="b-bottom-right b-top" onClick={() => squareClickHandler(1)} state={gameState[1]}/>
