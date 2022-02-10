@@ -1,13 +1,142 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
+}
+
+.app-header {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  text-align: center;
+  background-color: #506299;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading-text {
+  color: whitesmoke;
+  font-size: 32px;
+  font-weight: bolder;
+  text-align: center;
+  margin: 20px;
+}
+
+.square {
+  min-width: 50px;
+  min-height: 50px;
+  font-size: 64px;
+  text-align: center;
+  background-color:white;
+  font-weight: bolder;
+  padding: 30px;
+}
+
+.fc-aqua {
+  color: blue;
+}
+
+.fc-white {
+  color: black;
+}
+
+.fw-600 {
+  font-weight: bolder;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.b-bottom-right {
+  border-right: 8px solid #074e33;
+  border-bottom: 8px solid #074e33;
+}
+.b-bottom{
+  border-bottom: 15px solid #660707;
+}
+
+.b-top {
+  border-top: 15px solid #660707;
+}
+
+.b-left {
+  border-left: 15px solid rgba(0, 0, 0, 0.836)
+}
+.b-right {
+  border-right: 15px solid rgba(0, 0, 0, 0.836)
+}
+
+.clear-button {
+  width: max-content;
+  background:white;
+  color: red;
+  margin: 40px auto 10px auto;
+  padding: 5px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .heading-text {
+      color: black;
+      font-size: 30px;
+      font-weight: bolder;
+      text-align: center;
+      margin: 60px 10px;
+  }
+
+  .square {
+      background-color:rgb(180, 175, 167) ;
+      min-width: 80px;
+      min-height: 80px;
+      font-size: 32px;
+      font-weight: bolder;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .b-bottom-right {
+    border-right: 10px solid #48074e;
+    border-bottom: 10px solid #48074e;
+  }
+  .b-bottom{
+    border-bottom: 10px solid #072866;
+  }
+  
+  .b-top {
+    border-top: 10px solid #072866;
+  }
+  
+  .b-left {
+    border-left: 10px solid #072866;
+  }
+  .b-right {
+    border-right: 10px solid #072866;
+  }
+
+  .clear-button {
+      width: max-content;
+      margin: 40px auto 10px auto;
+  }
 }
