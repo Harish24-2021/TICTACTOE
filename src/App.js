@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import Square from "./Square";
 
+const clearSquares = ["", "", "", "", "", "", "", "", "", ""];
 
 function App() {
     const [gameState, setGameState] = useState(clearSquares)
     const [isXChance, setIsXChance] = useState(false)
 
-    const clearSquares = ["", "", "", "", "", "", "", "", "", ""];
 
     const squareClickHandler = (index) => {
         let strings = Array.from(gameState);
@@ -21,15 +21,7 @@ function App() {
         setGameState(clearSquares)
     }
 
-
-    useEffect(() => {
-        let winner = checkWinner();
-        if (winner) {
-            clearGame();
-            alert(`Ta da ! ${winner} won the Game !`)
-        }
-    }, [gameState])
-
+    
     let checkWinner = () => {
         const lines = [
             [0, 1, 2],
@@ -50,6 +42,16 @@ function App() {
         }
         return null;
     }
+
+
+    useEffect(() => {
+        let winner = checkWinner();
+        console.log(winner)
+        if (winner) {
+            alert(`Ta da ! ${winner} won the Game !`)
+            clearGame();
+        }
+    }, [gameState])
 
     return (
         <div className="header">
