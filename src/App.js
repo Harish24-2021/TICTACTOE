@@ -10,6 +10,7 @@ function App() {
 
     const squareClickHandler = (index) => {
         let strings = Array.from(gameState);
+        
         if (strings[index])
             return;
         strings[index] = isXChance ? "X" : "0";
